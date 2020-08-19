@@ -17,8 +17,12 @@ class JokeFactory
 		}
 	}
 
-	public function getRandomJoke()
+	public function getRandomJoke($amount = 1)
 	{
 		return $this->jokes[array_rand($this->jokes)];
-	}
+    }
+    
+    public function getRandomJokes($amount = 1) {
+        return $this->jokes;
+    }
 }
