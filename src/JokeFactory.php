@@ -2,27 +2,28 @@
 
 namespace sirapu\ChuckNorrisJokes;
 
-class JokeFactory 
+class JokeFactory
 {
     protected $jokes = [
-		'Chuck Norris\' tears cure cancer. Too bad he has never cried.',
-		'Chuck Norris counted to infinity... Twice.',
-		'If you can see Chuck Norris, he can see you. If you can\'t see Chuck Norris you may be only seconds away from death.'
-	];
+        'Chuck Norris\' tears cure cancer. Too bad he has never cried.',
+        'Chuck Norris counted to infinity... Twice.',
+        'If you can see Chuck Norris, he can see you. If you can\'t see Chuck Norris you may be only seconds away from death.',
+    ];
 
     public function __construct(array $jokes = null)
-	{
-		if ($jokes) {
-			$this->jokes = $jokes;
-		}
-	}
-
-	public function getRandomJoke($amount = 1)
-	{
-		return $this->jokes[array_rand($this->jokes)];
+    {
+        if ($jokes) {
+            $this->jokes = $jokes;
+        }
     }
-    
-    public function getRandomJokes($amount = 1) {
+
+    public function getRandomJoke($amount = 1)
+    {
+        return $this->jokes[array_rand($this->jokes)];
+    }
+
+    public function getRandomJokes($amount = 1)
+    {
         return $this->jokes;
     }
 }
