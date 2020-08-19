@@ -2,6 +2,6 @@
 
 namespace sirapu\ChuckNorrisJokes\Jokes;
 
-class Joke {
-    
+class Joke
+{
 }
